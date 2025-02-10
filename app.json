@@ -1,0 +1,39 @@
+{
+  "id": "f6ef8e29-87f2-4560-99a6-c91d572788b1",
+  "name": "NewtonPro_Inbound",
+  "publisher": "Skywalk Global",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "98cf8e99-87a7-4226-8e99-100a1583559c",
+      "name": "ALProjectMain",
+      "publisher": "Default Publisher",
+      "version": "1.0.0.3"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 51000,
+      "to": 51200 
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.2",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
