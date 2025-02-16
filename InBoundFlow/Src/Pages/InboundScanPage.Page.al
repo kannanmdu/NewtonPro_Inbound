@@ -55,9 +55,22 @@ page 51000 "Inbound Scan Page"
                         if PurchaseHeaderRec."Status" <> PurchaseHeaderRec.Status::Released then
                             Error('Purchase Order is not released');
                         if PurchaseHeaderRec."Status" = PurchaseHeaderRec.Status::Released then begin
-                            PurchaseHeaderRec.Init();
                             PurchaseHeaderRec.Scanner := "Scan Verifier Name";
-                            Page.RunModal(Page::"Purchase Order Scan Page", PurchaseHeaderRec, PurchaseHeaderRec."No.");
+                            case
+                            PurchaseHeaderRec.OrderType of
+                                PurchaseheaderRec.OrderType::Backorder:
+                                    begin
+                                        Page.RunModal(Page::"Get Temp Bin", PurchaseHeaderRec, PurchaseHeaderRec."No.");
+                                    end;
+                                PurchaseheaderRec.OrderType::"Backorder-DS":
+                                    begin
+                                        Page.RunModal(Page::"Assign Bin", PurchaseHeaderRec, PurchaseHeaderRec."No.");
+                                    end;
+                                else
+                                    Page.RunModal(Page::"Purchase Order Scan Page", PurchaseHeaderRec, PurchaseHeaderRec."No.");
+
+                            end;
+
                         end;
                     end;
 

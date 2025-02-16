@@ -44,6 +44,21 @@ pageextension 51000 "Purchase Order" extends "Purchase Order"
                 Editable = true;
 
             }
+            field(Bin; Rec.Bin)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Bin field.', Comment = '%';
+                Caption = 'Bin';
+                Editable = False;
+            }
+            field(OrderType; Rec.OrderType)
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the OrderType field.', Comment = '%';
+                Caption = 'Order Type';
+                Editable = true;
+            }
+
 
 
             usercontrol(SetFieldFocus; SetFieldFocus)

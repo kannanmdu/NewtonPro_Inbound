@@ -46,6 +46,12 @@ page 51001 "Purchase Order Scan Page"
                     end;
 
                 }
+                field(Bin; Rec.Bin)
+                {
+                    ApplicationArea = all;
+                    Caption = 'Bin';
+                    Editable = False;
+                }
                 usercontrol(SetFieldFocus; SetFieldFocus)
                 {
                     ApplicationArea = All;
@@ -72,6 +78,8 @@ page 51001 "Purchase Order Scan Page"
     var
         "Scan Products": Text[100];
         "Verifier": Text[50];
+
+
 
     local procedure ValidateScannedProduct("Scan products": Text) "Line No.": Integer
     var

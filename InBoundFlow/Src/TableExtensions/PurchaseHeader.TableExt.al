@@ -7,5 +7,16 @@ tableextension 51000 "Purchase Header" extends "Purchase Header"
             Caption = 'Scanner';
             DataClassification = ToBeClassified;
         }
+        field(50101; Bin; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Bin';
+        }
+        field(50102; OrderType; Option)
+        {
+            DataClassification = ToBeClassified;
+            OptionMembers = ,Backorder,Replenishment,"Backorder-DS";
+        }
+
     }
 }
