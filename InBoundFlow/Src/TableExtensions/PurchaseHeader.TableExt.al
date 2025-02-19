@@ -11,6 +11,9 @@ tableextension 51000 "Purchase Header" extends "Purchase Header"
         {
             DataClassification = ToBeClassified;
             Caption = 'Bin';
+            TableRelation = Bin.Code;
+            ValidateTableRelation = true;
+
         }
         field(50102; OrderType; Option)
         {

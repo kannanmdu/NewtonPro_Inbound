@@ -19,7 +19,7 @@ page 51000 "Inbound Scan Page"
                 field("Scan Verifier Name"; "Scan Verifier Name")
                 {
                     ApplicationArea = All;
-                    Caption = 'Verifier Name';
+                    Caption = 'Receiver Name';
                     Editable = true;
 
                     trigger OnValidate()

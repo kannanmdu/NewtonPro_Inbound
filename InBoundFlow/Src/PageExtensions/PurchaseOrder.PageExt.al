@@ -40,7 +40,7 @@ pageextension 51000 "Purchase Order" extends "Purchase Order"
             field("Verifier"; "Verifier")
             {
                 ApplicationArea = All;
-                Caption = 'Verifier';
+                Caption = 'Receiver';
                 Editable = true;
 
             }
